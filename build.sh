@@ -1,9 +1,7 @@
 #!/bin/bash -e
 
-if ! type fastlane > /dev/null 2>&1; then
-  echo 'fastlane not found'
-  sudo gem install fastlane -NV -v 2.204
-fi
+echo 'install fastlane 2.204'
+sudo gem install fastlane -NV -v 2.204
 
 script_path=$(cd $(dirname ${0}); pwd)
 cp -r ${script_path}/fastlane ./
