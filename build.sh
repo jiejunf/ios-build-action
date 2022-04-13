@@ -1,7 +1,8 @@
 #!/bin/bash -e
 
-echo 'install fastlane lastest'
-sudo gem install fastlane -NV
+echo 'install fastlane 2.204'
+sudo gem install fastlane -NV -v 2.204
+sudo gem uninstall fastlane -v 2.205.0
 
 script_path=$(cd $(dirname ${0}); pwd)
 cp -r ${script_path}/fastlane ./
