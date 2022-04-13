@@ -5,8 +5,6 @@ if ! type fastlane > /dev/null 2>&1; then
   sudo gem install fastlane -NV -v 2.204
 fi
 
-fastlane -v;
-
 script_path=$(cd $(dirname ${0}); pwd)
 cp -r ${script_path}/fastlane ./
 cp -r ${script_path}/Gemfile ./
